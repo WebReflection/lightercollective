@@ -3,7 +3,7 @@
 [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/WebReflection/donate)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 
-A lighter opencollective postinstall alternative.
+A lighter [opencollective](https://github.com/opencollective/opencollective) postinstall alternative.
 
 If your `package.json` contains, as example, these entries:
 ```js
