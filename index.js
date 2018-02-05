@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// (C) Andrea Giammarchi - @WebReflection (ISC)
 var package = require(require('path').resolve('./package.json'));
 var collective = package.collective;
 if (!collective) process.exit(0);
@@ -25,14 +24,5 @@ function showLogo(data) {
     console.log(logo);
     console.log('');
   }
-  console.log('     ' + stars + ' Thank you for using ' + package.name + '! ' + stars);
-  console.log('');
-  console.log('Please consider donating to our open collective');
-  console.log('     to help us maintain this package.');
-  console.log('');
-  console.log('  ' + collective.url + '/donate');
-  console.log('');
-  console.log('                    ' + stars);
-  console.log('');
   process.exit(0);
 }
