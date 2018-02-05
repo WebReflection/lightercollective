@@ -6,7 +6,7 @@
 A lighter [opencollective](https://github.com/opencollective/opencollective) postinstall alternative.
 
 ### Project Goal
-Show all necessary info to help contributing to relative [Open Collective](https://opencollective.com) projects, without bringing in the entirety of the [opencollective-cli](https://github.com/opencollective/opencollective-cli) as dependency (an overhead of *24MB* vs *4K* in total for this package).
+Show all necessary info to help contributing to relative [Open Collective](https://opencollective.com) projects, without bringing in the entirety of the [opencollective](https://github.com/opencollective/opencollective-cli) CLI as dependency (an overhead of *24MB* vs *4K* in total for this package).
 
 ### How To
 If your `package.json` contains, as example, these entries:
