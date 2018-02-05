@@ -42,4 +42,4 @@ all you need to do is to replace `postinstall` and `dependencies` with `lighterc
 }
 ```
 
-The goal of this project is to be as small as possible, if not smaller.
+The goal of this project is to be as small as possible, providing all the necessary info to help contributing to [Open Collective](https://opencollective.com) projects.
