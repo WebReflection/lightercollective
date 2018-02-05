@@ -42,4 +42,5 @@ all you need to do is to replace `postinstall` and `dependencies` with `lighterc
 }
 ```
 
-The goal of this project is to be as small as possible, providing all the necessary info to help contributing to [Open Collective](https://opencollective.com) projects.
+### Project Goal
+Show all necessary info to help contributing to relative [Open Collective](https://opencollective.com) projects, without bringing in the entirety of the [opencollective-cli](https://github.com/opencollective/opencollective-cli) as dependency (an overhead of *24MB* vs *4K* in total for this package).
