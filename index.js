@@ -1,20 +1,30 @@
 #!/usr/bin/env node
 // (C) Andrea Giammarchi - @WebReflection (ISC)
-var package = require(require('path').resolve('./package.json'));
+var path = require('path');
+var json = path.resolve('./package.json');
+var package = require(json);
 var collective = package.collective;
 if (!collective) process.exit(0);
 if (collective.logo) {
-  require(/^https:/.test(collective.logo) ? 'https' : 'http')
-    .get(collective.logo, function (response) {
-      if (response.statusCode === 200) {
-        response.setEncoding('utf8');
-        var data = [];
-        response.on('data', function (chunk) { data.push(chunk); });
-        response.on('end', function () { showLogo(data.join('')) });
+  if (/^(https?):/.test(collective.logo))
+    require(RegExp.$1)
+      .get(collective.logo, function (response) {
+        if (response.statusCode === 200) {
+          response.setEncoding('utf8');
+          var data = [];
+          response.on('data', function (chunk) { data.push(chunk); });
+          response.on('end', function () { showLogo(data.join('')) });
+        }
+        else showLogo(null);
+      })
+      .on('error', showLogo);
+  else
+    require('fs').readFile(
+      path.resolve(path.dirname(json), collective.logo),
+      function (err, data) {
+        showLogo(err ? null : data.toString())
       }
-      else showLogo(null);
-    })
-    .on('error', showLogo);
+    )
 }
 else showLogo(null);
 function showLogo(data) {
