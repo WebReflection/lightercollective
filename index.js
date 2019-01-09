@@ -4,7 +4,14 @@ var path = require('path');
 var json = path.resolve('./package.json');
 var package = require(json);
 var collective = package.collective;
-if (!collective) process.exit(0);
+
+var envDisable = Boolean(process.env.DISABLE_OPENCOLLECTIVE);
+var logLevel = process.env.npm_config_loglevel;
+var logLevelDisplay = ['silent', 'error', 'warn'].indexOf(logLevel) > -1;
+if (envDisable || logLevelDisplay || !collective) {
+  process.exit(0);
+}
+
 if (collective.logo) {
   if (/^(https?):/.test(collective.logo))
     require(RegExp.$1)

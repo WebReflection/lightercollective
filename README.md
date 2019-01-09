@@ -45,3 +45,8 @@ all you need to do is to replace `postinstall` and `dependencies` with `lighterc
   }
 }
 ```
+
+### Disabling this message
+In some places (e.g. CI) you may want to disable this output. You can do this by setting the environment variable `DISABLE_OPENCOLLECTIVE=true`.
+
+It will not be shown if npm's log level is set to silent (`--silent`), warn (`--quiet`), or error (`--loglevel error`).
