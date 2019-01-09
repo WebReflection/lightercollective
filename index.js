@@ -5,10 +5,11 @@ var json = path.resolve('./package.json');
 var package = require(json);
 var collective = package.collective;
 
-var envDisable = Boolean(process.env.DISABLE_OPENCOLLECTIVE);
-var logLevel = process.env.npm_config_loglevel;
-var logLevelDisplay = ['silent', 'error', 'warn'].indexOf(logLevel) > -1;
-if (envDisable || logLevelDisplay || !collective) {
+if (
+  !collective ||
+  -1 < ['silent', 'error', 'warn'].indexOf(process.env.npm_config_loglevel) ||
+  /^(?:1|true|yes|y)$/i.test(process.env.DISABLE_OPENCOLLECTIVE)
+) {
   process.exit(0);
 }
 
