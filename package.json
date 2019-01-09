@@ -1,6 +1,6 @@
 {
   "name": "lightercollective",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a basic postinstall only binary based on package.json collective info",
   "bin": "./index.js",
   "keywords": [
