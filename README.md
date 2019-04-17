@@ -14,7 +14,7 @@ If your `package.json` contains, as example, these entries:
 {
   "name": "hyperhtml",
   "scripts": {
-    "postinstall": "opencollective postinstall"
+    "postinstall": "opencollective postinstall || exit 0"
   },
   "dependencies": {
     "opencollective": "^1.0.3"
@@ -33,7 +33,7 @@ all you need to do is to replace `postinstall` and `dependencies` with `lighterc
 {
   "name": "hyperhtml",
   "scripts": {
-    "postinstall": "lightercollective"
+    "postinstall": "lightercollective || exit 0"
   },
   "dependencies": {
     "lightercollective": "^0.0.0"
