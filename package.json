@@ -2,10 +2,8 @@
   "name": "lightercollective",
   "version": "0.3.0",
   "description": "a basic postinstall only binary based on package.json collective info",
-  "bin": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WebReflection/lightercollective.git"
+  "bin": {
+    "lightercollective": "index.js"
   },
   "keywords": [
     "opencollective",
@@ -13,5 +11,17 @@
     "light"
   ],
   "author": "Andrea Giammarchi",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebReflection/lightercollective/issues"
+  },
+  "homepage": "https://github.com/WebReflection/lightercollective#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/lightercollective.git"
+  }
 }
