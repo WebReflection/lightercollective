@@ -3,6 +3,10 @@
   "version": "0.3.0",
   "description": "a basic postinstall only binary based on package.json collective info",
   "bin": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebReflection/lightercollective.git"
+  },
   "keywords": [
     "opencollective",
     "postinstall",
